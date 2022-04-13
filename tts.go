@@ -5,6 +5,7 @@ import (
 	"github.com/faiface/beep"
 	"github.com/faiface/beep/mp3"
 	"github.com/faiface/beep/speaker"
+	"github.com/u2go/u2utils"
 	"io"
 	"net/http"
 	"net/url"
@@ -19,12 +20,12 @@ const (
 
 func TtsSpeak(text, dir, lang string) error {
 
-	err := FileMkdirAll(dir)
+	err := u2utils.FileMkdirAll(dir)
 	if err != nil {
 		return err
 	}
-	file := path.Join(dir, SHA256(text)+".mp3")
-	exists, err := FileExists(file)
+	file := path.Join(dir, u2utils.SHA256(text)+".mp3")
+	exists, err := u2utils.FileExists(file)
 	if err != nil {
 		return err
 	}
