@@ -1,4 +1,4 @@
-package u2utils
+package tts
 
 import (
 	"github.com/u2go/u2utils"
@@ -6,5 +6,5 @@ import (
 )
 
 func TestTtsSpeak(t *testing.T) {
-	u2utils.PanicOnError(TtsSpeak("1号指标下降20%", "tmp", "zh"))
+	u2utils.PanicOnError(TtsSpeak("Hello 中文语音测试", "tmp", "zh"))
 }
