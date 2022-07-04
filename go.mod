@@ -1,4 +1,4 @@
-module tts
+module github.com/u2go/tts
 
 go 1.18
 
